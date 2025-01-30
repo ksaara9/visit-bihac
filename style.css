@@ -1,0 +1,239 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Miniver&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Caveat", serif;
+}
+
+:root{
+    /* Colors */
+    --white-color: #fff;
+    --dark-color:#1d1f2e;
+    --primary-color:#a0aaf2;
+    --secondary-color:#a3f0c7;
+    --light-color:#ded5f2;
+    --medium-gray-color:#ccc;
+    --text-color:#333;
+
+    /* Font sizes */
+    --font-size-s: 1rem;
+    --font-size-n: 1.2rem;
+    --font-size-m: 1.5rem;
+    --font-size-l: 2rem;
+    --font-size-xl: 2.5rem;
+    --font-size-xxl: 3rem;
+
+    /* Font weight */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* Border radius */
+    --border-radius-s: 8px;
+    --border-radius-m: 30px;
+    --border-radius-circle: 50%;
+
+    /* Site max width */
+    --site-max-width: 1300px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+img {
+    width: 100%;
+}
+
+.section-content {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: var(--site-max-width);
+}
+
+.section-title {
+    font-size: var(--font-size-xxl);
+    text-align: center;
+    padding: 30px 0;
+    text-transform: uppercase;
+    margin-top: 10px;
+    background: var(--secondary-color);
+}
+
+.section-title::after {
+    content: "";
+    width: 80px;
+    height: 5px;
+    display: block;
+}
+
+/* Navbar Styling */
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    background: var(--primary-color); 
+}
+
+.navbar {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .nav-logo .logo-text {
+    color: var(--white-color);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+}
+
+.navbar .nav-menu {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar .nav-menu .nav-link {
+    padding: 10px 18px;
+    color: var(--white-color);
+    font-size: var(--font-size-m);
+    background: var(--secondary-color);
+    border-radius: var(--border-radius-m);
+    transition: 0.3s ease;
+}
+
+.navbar .nav-menu .nav-link:hover {
+    color: var(--primary-color);
+    background: var(--dark-color);
+}
+
+.navbar :where(#menu-close-button, #menu-open-button) {
+    display: none;
+}
+
+/* Hero Section Styling */
+.hero-section {
+    min-height: 100vh;
+    background: linear-gradient(rgba(160, 170, 242, 0.7), rgba(160, 170, 242, 0.7)), 
+                url(pocetnaa.jpg) center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white-color);
+    text-align: center;
+}
+
+.hero-section .hero-details .title {
+    font-size: var(--font-size-xxl);
+    color: var(--secondary-color);
+    font-family: "Miniver", sans-serif;
+    font-size: 4rem; /* Increased size for bigger text */
+}
+
+/* About Section Styling */
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 20px;
+}
+
+.about-section .about-text {
+    flex: 1;
+    font-size: var(--font-size-m);
+    color: var(--text-color);
+    text-align: left;
+    max-width: 50%;
+    margin-left: 20px;
+}
+
+.about-section .about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-section .about-image img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: var(--border-radius-circle);
+}
+
+/* Must Visit Places Section */
+.must-visit-section {
+    padding: 120px 0;
+    background: var(--secondary-color);
+}
+
+.must-visit-section .section-title {
+    font-size: var(--font-size-l);
+    margin-bottom: 20px;
+}
+
+.must-visit-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.must-visit-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: var(--border-radius-s);
+}
+
+.must-visit-text {
+    text-align: center;
+    max-width: 300px;
+    font-size: var(--font-size-m);
+    margin-top: 10px;
+}
+
+/* Book Trip Section */
+.book-trip-section {
+    background: #70c1e0;
+    padding: 80px 0;
+}
+
+.booking-section .input-field {
+    font-size: 1.5rem;
+    padding: 15px;
+    border-radius: var(--border-radius-s);
+    border: 1px solid var(--medium-gray-color);
+}
+
+.booking-section button {
+    background: var(--dark-color);
+    color: var(--white-color);
+    font-size: var(--font-size-l);
+    padding: 15px;
+    border-radius: var(--border-radius-m);
+    transition: 0.3s ease;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--dark-color);
+    color: var(--white-color);
+}

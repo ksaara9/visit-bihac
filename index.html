@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Bihac</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar section-content">
+            <a href="index.html" class="nav-logo">
+                <h2 class="logo-text">Visit Bihac</h2>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="section-content">
+                <div class="hero-details">
+                    <h2 class="title">Bihac - Bosnia and Herzegovina</h2>
+                    <h3 class="subtitle">Explore the beauty of Bihać</h3>
+                    <p class="description">Discover breathtaking landscapes, rich history, and warm hospitality.</p>
+                    <div class="buttons">
+                        <a href="#booking" class="button order-now">Book Now</a>
+                        <a href="#contact" class="button contact-us">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Section -->
+        <section id="booking" class="booking-section">
+            <div class="section-content">
+                <h2 class="section-title">Book Your Trip</h2>
+                <form action="submit-form.php" method="POST" class="trip-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required class="input-field">
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required class="input-field">
+
+                    <label for="date">Booking Date:</label>
+                    <input type="date" id="date" name="date" required class="input-field">
+
+                    <button type="submit">Book Now</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Visit Bihać. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle logic (if you have a mobile menu setup)
+        const menuOpenButton = document.querySelector("#menu-open-button");
+        const menuCloseButton = document.querySelector("#menu-close-button");
+        const navMenu = document.querySelector(".nav-menu");
+
+        menuOpenButton.addEventListener("click", () => {
+            document.body.classList.add("show-mobile-menu");
+        });
+
+        menuCloseButton.addEventListener("click", () => {
+            document.body.classList.remove("show-mobile-menu");
+        });
+
+        document.addEventListener("click", (event) => {
+            if (!navMenu.contains(event.target) && event.target !== menuOpenButton) {
+                document.body.classList.remove("show-mobile-menu");
+            }
+        });
+    </script>
+</body>
+</html>
